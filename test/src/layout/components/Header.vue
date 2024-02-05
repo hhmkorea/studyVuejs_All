@@ -16,13 +16,20 @@
     <nav>
       <div class="contentbox">
         <ul>
-          <li><button>도서 소개</button></li>
-          <li><button>자료실</button></li>
-          <li><button>동영상 강의</button></li>
-          <li><button>교재 샘플</button></li>
-          <li><button>회사 소개</button></li>
+          <li v-for="(item, index) in menulists" :key="index">
+            <button v-html="item"></button>
+          </li>
         </ul>
       </div>
     </nav>
   </header>
 </template>
+<script>
+export default {
+  data() {
+    return {
+      menulists: ["도서 소개", "자료실", "동영상 강의", "교재 샘플", "회사 소개"],
+    }
+  }
+};
+</script>

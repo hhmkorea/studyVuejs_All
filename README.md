@@ -6,6 +6,8 @@
 + test : Vue.js 교재 실습
 > 프런트엔드UI개발 with Vue.js - 김윤미 지음
 > https://github.com/my-yoon/Doit-Project.git
++ common.css 
+> Header:affter 부분에 가상요소 적용.
 ###
 #### + my-pjt 시리즈  + 
 + my-pjt : 
