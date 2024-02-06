@@ -8,7 +8,7 @@
           </button>
         </div>
         <div class="system">
-            <button class="login">로그인</button>
+            <button class="login" v-b-modal.login>로그인</button>
             <button class="member">회원가입</button>
         </div>
       </div>
@@ -22,6 +22,20 @@
         </ul>
       </div>
     </nav>
+    <b-modal id="login" class="modal" hide-footer >
+      <template #modal-title>
+        <div class="layertit"><i class="bi bi-clipboard-check" />로그인</div>
+      </template>
+      <div clas="loginform">
+        <label for="id"><i clas="bi bi-file-person" />아이디</label>
+        <b-form-input id="id" placeholder="아이디를 입력해 주세요" />
+        <label for="pass"><i class="bi bi-lock" />비밀번호</label>
+        <b-form-input type="password" id="pass" placeholder="비밀번호를 입력해 주세요" />
+        <div class="btnwrap">
+          <b-button variant="login">로그인</b-button>
+        </div>
+      </div>
+    </b-modal>
   </header>
 </template>
 <script>

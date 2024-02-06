@@ -297,3 +297,21 @@ footer {
         display: block;
     }
 }
+.modal-open #appPage {
+    z-index: 9;
+    position: relative;
+}
+.modal-header {
+    padding: 10px 20px;
+}
+.modal-header::after {
+    display: none;
+}
+.layertit {
+    font-size: 24px;
+    color: #222222;
+    font-weight: 700;
+}
+.bi {
+    margin-right: 5px;
+}
