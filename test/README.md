@@ -27,3 +27,12 @@
 + @media screen : 반응형 적용. 
 > 템플릿 안에서만 적용할 스타일 정의 할때는 각 컴포넌트의 < style scoped > 안에 정의. 
 ###
+### + 템플릿 문법
++ 보간법 : interpolation, 콧수염 문법, {{}}, HTML 요소에 데이터를 바인딩할 때 사용.
++ v-html 
++ v-bind: or :
++ v-on: or @
++ v-if
++ v-show
++ v-for
++ < slot > : 특정 영역을 다른 컴포넌트에서 작성한 내용으로 대체할때 사용.
