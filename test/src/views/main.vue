@@ -1,16 +1,16 @@
 <template>
   <section class="maincontents">
-    <selection class="mainbanner"><img src="/images/mainimg.png" /></selection>
-    <selection class="newbook">
+    <section class="mainbanner"><img src="/images/mainimg.png" /></section>
+    <section class="newbook">
       <h1 class="mainit">
         새로 나온 도서<span>분야별로 새로 나온 도서를 만나 보세요.</span>
       </h1>
       <div class="tapcontent">
         <div class="tap">
-          <b-button variant="tap active" >IT 전문서</b-button>
-          <b-button variant="tap">업무 능력, 기타</b-button>
-          <b-button variant="tap">사진 예술</b-button>
-          <b-button variant="tap">데이터 과학</b-button>
+          <b-button variant="tap active" @click="AddContents('Newbooks_it')">IT 전문서</b-button>
+          <b-button variant="tap" @click="AddContents('Newbooks_work')">업무 능력, 기타</b-button>
+          <b-button variant="tap" @click="AddContents('Newbooks_photo')">사진 예술</b-button>
+          <b-button variant="tap" @click="AddContents('Newbooks_science')">데이터 과학</b-button>
         </div>
         <VueSlickCarousel class="mainslider" v-bind="settings">
           <div class="rollimg" v-for="(item, index) in Newbooks" :key="index">
@@ -20,27 +20,49 @@
           </div>
         </VueSlickCarousel>
       </div>
-    </selection>
-    <selection class="searchbook">
+    </section>
+    <section class="searchbook">
       <h1 class="mainit">
         도서 검색<span>찾고자 하는 도서명을 검색해 주세요.</span>
       </h1>
-    </selection>
-    <selection class="bannermenu"></selection>
-    <selection class="notice">
+    </section>
+    <section class="bannermenu"></section>
+    <section class="notice">
       <h1 class="mainit">공지 사항</h1>
-    </selection>
+    </section>
   </section>
 </template>
 <script>
 export default {
   data() {
     return {
-      Newbooks: [
+      Newbooks: [],
+      Newbooks_it: [
         {
           imgurl: "/images/books_image/book01.jpg",
           name: "Do it! 웹 사이트 따라 만들기",
           subdec: "HTML, CSS, 자바스크립트 문법서는 공부했지만, 웹 사이트를...",
+        },
+      ],
+      Newbooks_work: [
+        {
+          imgurl: "/images/books_image/book08.jpg",
+          name: "된다! 엑셀 수식 & 함수",
+          subdec: "매일 쓰는 엑셀이 매번 어렵게 느껴지는 건 너무 많은 기능을...",
+        },
+      ],
+      Newbooks_photo: [
+        {
+          imgurl: "/images/books_image/book15.jpg",
+          name: "포토샵 보정&합성 디자인 사전",
+          subdec: "포토샵 사진 보정, 합성 때문에 고민인가요? 한 권으로 상위...",
+        },
+      ],
+      Newbooks_science: [
+        {
+          imgurl: "/images/books_image/book21.jpg",
+          name: "블록체인 무엇인가?",
+          subdec: "이 책은 과장된 소문에 휘둘리지도, 비트코인에 집중하지도 않는...",
         },
       ],
       settings: {
@@ -64,7 +86,20 @@ export default {
           },
         ],
       },
+      method: {
+        AddContents(contents) {
+          alert(contents);
+        }
+      }
     };
+  },
+  created() {
+    this.Newbooks = this.Newbooks_it;
+  },
+  methods: {
+    AddContents(contents) {
+      this.Newbooks = this.Newbooks_it;
+    },
   },
 };
 </script>
