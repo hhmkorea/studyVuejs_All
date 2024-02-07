@@ -75,8 +75,26 @@
                         description="※ 이메일 수신을 허락하면 독자 혜택을 받을 수 있어요.">
             <b-form-radio value="Y" v-model="form.mail">예</b-form-radio>
             <b-form-radio value="N" v-model="form.mail">아니오</b-form-radio>
-            선택된 라디오 버튼의 값: {{ form.mail }}
+<!--            선택된 라디오 버튼의 값: {{ form.mail }}-->
           </b-form-group>
+          <b-form-group id="formid4"
+                        label="관심 분야 선택"
+                        label-for="checkedtype"
+                        description="※ 관심 분야를 선택하세요. 여러 개 선택할 수 있어요.">
+            <b-form-checkbox value="HTML" v-model="form.checkedtype">HTML/CSS</b-form-checkbox>
+            <b-form-checkbox value="javascript" v-model="form.checkedtype">자바스크립트</b-form-checkbox>
+            <b-form-checkbox value="python" v-model="form.checkedtype">파이썬</b-form-checkbox>
+            <b-form-checkbox value="Vue.js" v-model="form.checkedtype">Vue.js</b-form-checkbox>
+            <b-form-checkbox value="angular" v-model="form.checkedtype">앵귤러</b-form-checkbox>
+            <b-form-checkbox value="react" v-model="form.checkedtype">리액트</b-form-checkbox>
+            <b-form-checkbox value="data" v-model="form.checkedtype">자료구조/알고리즘</b-form-checkbox>
+            <b-form-checkbox value="cad" v-model="form.checkedtype">오토캐드</b-form-checkbox>
+<!--            관심 분야 선택: {{ form.checkedtype }}-->
+          </b-form-group>
+          <div class="btnwrap half">
+            <b-button type="submit" variant="login">확인</b-button>
+            <b-button type="reset" variant="cancel">취소</b-button>
+          </div>
         </b-form>
       </div>
     </b-modal>
@@ -97,6 +115,7 @@ export default {
         id: "",
         pass: "",
         mail: "",
+        checkedtype: [],
       }
     };
   },

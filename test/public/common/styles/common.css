@@ -346,3 +346,57 @@ footer {
     background: #17a2b8;
     color: #ffffff;
 }
+.form-group .d-block {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+.form-group:nth-of-type(1) {
+    padding-right: 80px;
+    position: relative;
+}
+.form-group:nth-of-type(1) input + button {
+    width: 75px;
+    height: 40px;
+    border: solid 1px #dddddd;
+    border-radius: 0;
+    background: #eeeeee;
+    font-size: 14px;
+    position: absolute;
+    right: 0;
+    bottom: 28px;
+}
+.form-group .form-text {
+    display: block;
+    padding: 0 20px;
+    margin: 10px 0 0 10px;
+    font-size: 12px;
+    color: #17a2b8 !important;
+    opacity: 0.6;
+    position: relative;
+}
+.form-group .form-text::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url("/images/pencil.svg") no-repeat left center;
+    opacity: 0.4;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.form-group .custom-control {
+    display: inline-block;
+    margin: 0 15px 0 20px;
+}
+.btnwrap.half {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.btn-cancel {
+    background: #d4d5d5;
+}
+.btnwrap.half .btn {
+    flex-basis: 49%;
+}
