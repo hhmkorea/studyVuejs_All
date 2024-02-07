@@ -84,7 +84,7 @@ export default {
       this.form.checked = []
       // Trick to reset/clear native browser form validation state
       this.show = false
-      this.$nextTick(() => {
+      this.$nextTick(() => { // $nextTick : show값을 true로 변경하여 새로운 양식 제공.
         this.show = true
       })
     }
