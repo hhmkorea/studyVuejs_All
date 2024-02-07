@@ -419,3 +419,63 @@ footer {
 .form-group:nth-of-type(4) .d-block::before {
     content: "\F890";
 }
+.mainbanner {
+    height: 350px;
+    overflow: hidden;
+    text-align: center;
+}
+.mainbanner > img {
+    height: 350px;
+}
+.newbook {
+    background: url("/images/content_bg.png") repeat-x;
+    padding: 40px 0;
+}
+.mainit {
+    margin-bottom: 20px;
+    font-size: 38px;
+    color: #222222;
+    font-weight: 900;
+    text-align: center;
+}
+.mainit > span {
+    display: block;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #ababab;
+}
+.tapcontent {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.tap {
+    margin: 40px 100px;
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+}
+.btn-tap {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    color: #888888;
+    font-weight: 700;
+    position: relative;
+}
+.btn-tap::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    background: #222222;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.btn-tap.active {
+    color: #222222;
+}
+.btn-tap.active::after {
+    width: 100%;
+}
