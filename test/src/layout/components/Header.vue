@@ -43,7 +43,7 @@
         </div>
       </template>
       <div class="modalcontainer">
-        <b-form>
+        <b-form @submit="Joinmember">
           <b-form-group id="formid1"
                         label="아이디"
                         label-for="id"
@@ -124,6 +124,21 @@ export default {
       if (this.$router.currentRoute.path !== target) {
         this.$router.push(target);
       }
+    },
+    Joinmember(event) {
+      event.preventDefault();
+      /* event.preventDefault()
+       : 이벤트의 기본 동작을 취소하는 메서드, 폼 이벤트 기본 동작을 막고 JS로 실행되도록 함. */
+      alert(JSON.stringify(this.form));
+      this.$nextTick(() => {
+        /* $nextTick()
+         : DOM 업데이트가 완료되고 추가 작업을 수행하고 싶을때 사용.
+           (예:데이터가 변경된 후 DOM요소에 접근하여 특정 스타일 변경 등 작업 수행) */
+        this.form.id = "";
+        this.form.pass = "";
+        this.form.mail = "";
+        this.form.checkedtype = [];
+      });
     },
   },
 };
