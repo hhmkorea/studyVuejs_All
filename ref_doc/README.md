@@ -1,14 +1,17 @@
 # React vs Vue.js 
 ###
 ### + Life Cycle +
-+ React : React_Life Cycle_001.png (촐처: https://gseok.gitbooks.io/react/content/assets/react-life-cycle-2.png)
-+ Vue.js : Vuejs_Life Cycle_001.png (출처: https://wormwlrm.github.io/static/1d3dae65499d59846dfbfaaa7daae963/c1b63/1.png)
++ React : React_Life Cycle_001.png 
+> 출처: https://gseok.gitbooks.io/react/content/assets/react-life-cycle-2.png
++ Vue.js : Vuejs_Life Cycle_001.png 
+> 출처: https://wormwlrm.github.io/static/1d3dae65499d59846dfbfaaa7daae963/c1b63/1.png
 ###
 ### + 설치 +
 + React
 > create-react-app .
 + Vue.js
 >
+###
 ### + 빌드 +
 + React
 > npm run build
