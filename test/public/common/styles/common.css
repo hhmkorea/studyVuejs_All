@@ -296,6 +296,27 @@ footer {
     .footer-logo address span {
         display: block;
     }
+    .tapcontent {
+        padding: 0 10px;
+    }
+    .mainit {
+        font-size: 26px;
+    }
+    .mainit > span {
+        font-size: 14px;
+        margin-top: 0px;
+    }
+    .tap {
+        margin: 20px 0;
+    }
+    .btn-tap{
+        height: 20px;
+        line-height: 20px;
+        font-size: 14px;
+    }
+    .mainslider {
+        margin: 0;
+    }
 }
 .modal-open #appPage {
     z-index: 9;
@@ -478,4 +499,40 @@ footer {
 }
 .btn-tap.active::after {
     width: 100%;
+}
+.mainslider {
+    margin: 0 100px;
+    position: relative;
+}
+.slick-arrow {
+    width: 42px;
+    height: 42px;
+    background: url("/images/arrow-icon.png") no-repeat 0 0/100%;
+    font-size: 0;
+    position: absolute;
+    top: 50%;
+    margin-top: -55px;
+    z-index: 9;
+}
+.slick-arrow.slick-prev {
+    left: 10px;
+}
+.slick-arrow.slick-next {
+    right: 10px;
+    transform: rotate(180deg);
+}
+.rollimg {
+    padding: 0 10px;
+}
+.imgbox > img {
+    max-width: 100%;
+}
+.rollimg > strong {
+    display: block;
+    font-size: 15px;
+    color: #66635b;
+}
+.textbox {
+    font-size: 13px;
+    color: #ababab;
 }
