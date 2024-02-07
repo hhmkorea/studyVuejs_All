@@ -4,13 +4,29 @@
 + React : React_Life Cycle_001.png 
 > 출처: https://gseok.gitbooks.io/react/content/assets/react-life-cycle-2.png
 + Vue.js : Vuejs_Life Cycle_001.png 
+> 인스턴스 생성과 소멸로 진행, 8가지 생명주기 Hook을 제공함. 
+
 > 출처: https://wormwlrm.github.io/static/1d3dae65499d59846dfbfaaa7daae963/c1b63/1.png
 ###
-### + 설치 +
-+ React
-> create-react-app .
-+ Vue.js
->
+### + 주요 설명 +
++ React : 페이스북에서 만든 js UI 라이브러리. Component 중심으로 UI 제작 지원.
++ Vue.js : MVVM(Model-View-ViewModel) 패턴으로 설계, 양방향 데이터 바인딩 가능.
+###
+### + 프로젝트 생성 +
++ React : Node.js 설치 후 실행
+> React 프로젝트 생성
+>> create-react-app .
++ Vue.js : Node.js 설치 후 실행 
+> vue-cli 설치 : 빠른 프로젝트 생성, 관리 라이브러리
+>> npm install -g @vue/cli c
+
+>> npm i -g @vue/cli-init 
+
+> Vue 프로젝트 생성 
+>> vue init webpack .
+or 
+> npm install(교재)
+
 ###
 ### + 빌드 +
 + React
@@ -25,4 +41,8 @@
 or
 > npm start
 + Vue.js : Create React App 자동실행 됨.
-> npm run serve
+> npm run dev 
+
+or 
+> npm run serve(교재)
+
