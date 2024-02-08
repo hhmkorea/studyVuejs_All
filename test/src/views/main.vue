@@ -86,11 +86,6 @@ export default {
           },
         ],
       },
-      method: {
-        AddContents(contents) {
-          alert(contents);
-        }
-      }
     };
   },
   created() {
@@ -98,7 +93,8 @@ export default {
   },
   methods: {
     AddContents(contents) {
-      this.Newbooks = this.Newbooks_it;
+      //alert(contents);
+      this.Newbooks = this[contents];
     },
   },
 };
