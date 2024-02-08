@@ -332,6 +332,14 @@ footer {
     .inputarea .btn-search .bi:before {
         font-size: 20px;
     }
+    .autolayer {
+        top: 29px;
+        height: 130px;
+    }
+    .autolayer ul li {
+        padding: 5px 15px;
+        font-size: 14px;
+    }
 }
 .modal-open #appPage {
     z-index: 9;
@@ -593,7 +601,27 @@ footer {
 .guidehash {
     text-align: center;
 }
-
-
+.autolayer {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    overflow-y: scroll;
+    background: #ffffff;
+    position: absolute;
+    left: 0;
+    top: 39px;
+    z-index: 99;
+}
+.autolayer ul li {
+    padding: 10px 30px;
+    border-top: solid 1px #dddddd;
+    font-size: 16px;
+    color: #888888;
+    cursor: pointer;
+}
+.autolayer ul li:hover {
+    background-color: #dddddd;
+    color: #222222;
+}
 
 

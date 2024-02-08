@@ -26,8 +26,13 @@
         도서 검색<span>찾고자 하는 도서명을 검색해 주세요.</span>
       </h1>
       <div class="inputarea">
-        <b-form-input />
+        <b-form-input v-model="keyword"/>
         <b-button variant="search"><i class="bi bi-search"></i> </b-button>
+        <div class="autolayer" v-if="keyword.length > 0">
+          <ul>
+            <li v-for="(item, index) in autocomplate[0].books" :key="index" v-html="item.booktit"></li>
+          </ul>
+        </div>
       </div>
       <div class="guidehash">
         <span v-for="(item,index) in hashdata" :key="index" v-html="item.text"></span>
@@ -100,7 +105,32 @@ export default {
         { text: "javascript", value: "javascript" },
         { text: "자료구조/알고리즘", value: "자료구조/알고리즘" },
         { text: "파이썬", value: "파이썬" },
-      ]
+      ],
+      booksname: [
+        {
+          cata: "html",
+          books: [
+            { booktit: "Do it! 웹 사이트 따라 만들기", author: "김윤미" },
+            { booktit: "Do it! HTML+CSS_자바스크립트 웹 표준의 정석", author: "고경희" },
+            { booktit: "Do it! 반응형 웹 만들기", author: "김운아" },
+            { booktit: "Do it! 인터랙티브 웹 페이지 만들기", author: "최성일" },
+          ],
+        },
+        {
+          cata: "vue",
+          books: [
+            { booktit: "Do it! vue.js 입문", author: "장기효" },
+          ],
+        },
+        {
+          cata: "javascript",
+          books: [
+            { booktit: "Do it! 프로그래시브 웹앱 만들기", author: "김응석" },
+            { booktit: "모던 자바스크립트 프로그래밍의 정석", author: "고경희" },
+          ],
+        },
+      ],
+      keyword: "",
     };
   },
   created() { // Vue Life Cycle 중 Created() Hook. Vue 인스턴스가 생성되고 호출됨.
@@ -119,5 +149,14 @@ export default {
        : 기존 설정된 클래스 값에 "active" 클래스 값을 추가, 이미 존재한다면 무시. */
     },
   },
+  computed: {
+    autocomplate() {
+      const resultlists = this.booksname.filter((item) => {
+        if (item.cata.match(this.keyword))
+          return item;
+      });
+      return resultlists;
+    }
+  }
 };
 </script>
