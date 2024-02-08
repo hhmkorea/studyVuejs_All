@@ -88,13 +88,20 @@ export default {
       },
     };
   },
-  created() {
+  created() { // Vue Life Cycle 중 Created() Hook. Vue 인스턴스가 생성되고 호출됨.
     this.Newbooks = this.Newbooks_it;
   },
   methods: {
-    AddContents(contents) {
-      //alert(contents);
-      this.Newbooks = this[contents];
+    AddContents(contents) { // Tap 클릭하고 받은 컨텐츠
+      this.Newbooks = this[contents]; // Tap 클릭하고 받은 컨텐츠 값을 보여줌.
+      document.querySelector(".active").classList.remove("active"); // 현재 클래스 리스트에서 "active" 삭제.
+      event.target.classList.add("active");
+      /*
+       + classList()
+       : 클래스 속성을 나타내는 DOMTokenList.
+         클래스 속성이 설정되어 있지 않거나 비어 있다면 elementClasses.length는 0을 반환함.
+       + classList().add("active")
+       : 기존 설정된 클래스 값에 "active" 클래스 값을 추가, 이미 존재한다면 무시. */
     },
   },
 };
