@@ -25,6 +25,13 @@
       <h1 class="mainit">
         도서 검색<span>찾고자 하는 도서명을 검색해 주세요.</span>
       </h1>
+      <div class="inputarea">
+        <b-form-input />
+        <b-button variant="search"><i class="bi bi-search"></i> </b-button>
+      </div>
+      <div class="guidehash">
+        <span v-for="(item,index) in hashdata" :key="index" v-html="item.text"></span>
+      </div>
     </section>
     <section class="bannermenu"></section>
     <section class="notice">
@@ -86,6 +93,14 @@ export default {
           },
         ],
       },
+      hashdata: [
+        { text: "html", value: "html" },
+        { text: "vue", value: "vue" },
+        { text: "css", value: "css" },
+        { text: "javascript", value: "javascript" },
+        { text: "자료구조/알고리즘", value: "자료구조/알고리즘" },
+        { text: "파이썬", value: "파이썬" },
+      ]
     };
   },
   created() { // Vue Life Cycle 중 Created() Hook. Vue 인스턴스가 생성되고 호출됨.

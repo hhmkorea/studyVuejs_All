@@ -61,7 +61,7 @@
 #
 #
 #
-### *** HTML 정리 *** 
+### *** 기타 메모 *** 
 ###
 #### + JS +
 + classList() 
@@ -73,3 +73,10 @@
 + console.log('event.target : ', event.target); // 이벤트가 발생한 DOM 요소
 + console.log('event.currentTarget : ', event.currentTarget); // 이벤트 핸들러가 연결된 DOM 요소
 + console.log('event.type : ', event.type); // 이벤트 유형
+###
+#### + BootStrap +
++ variant 속성 : BootStrap button에 붙는 속성.
+> varitant="login" 
++ HTML 변환시 이렇게 보임.
+> class="btn btn-login" 
+        

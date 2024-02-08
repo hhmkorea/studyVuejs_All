@@ -317,6 +317,21 @@ footer {
     .mainslider {
         margin: 0;
     }
+    .searchbook {
+        margin: 30px 0 20px;
+        padding: 20px 30px;
+    }
+    .inputarea .form-control {
+        height: 30px;
+    }
+    .btn-search {
+        width: 30px;
+        height: 30px;
+        top: -4px;
+    }
+    .inputarea .btn-search .bi:before {
+        font-size: 20px;
+    }
 }
 .modal-open #appPage {
     z-index: 9;
@@ -536,3 +551,49 @@ footer {
     font-size: 13px;
     color: #ababab;
 }
+.searchbook {
+    padding: 40px 0;
+    margin: 60px 0 40px;
+    background: #454545;
+}
+.searchbook .mainit {
+    color: #ffffff;
+}
+.inputarea,
+.guidehash {
+    max-width: 650px;
+    margin: 0 auto;
+}
+.inputarea {
+    position: relative;
+}
+.btn-search {
+    width:40px;
+    height: 40px;
+    position: absolute;
+    right: 10px;
+    top: 0px;
+}
+.inputarea .btn-search .bi::before {
+    font-size: 24px;
+}
+.inputarea .form-control {
+    border: none;
+}
+.guidehash span {
+    display: inline-block;
+    margin: 10px 10px 0 0;
+    color: #eeeeee;
+    font-size: 16px;
+}
+.guidehash span::before {
+    content: "#";
+    display: inline-block;
+}
+.guidehash {
+    text-align: center;
+}
+
+
+
+

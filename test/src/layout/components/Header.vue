@@ -33,6 +33,7 @@
         <b-form-input type="password" id="pass" placeholder="비밀번호를 입력해 주세요"/>
         <div class="btnwrap">
           <b-button variant="login">로그인</b-button>
+          <!-- variant 속성 : BootStrap button에 붙는 속성으로 html 변환시 class="btn btn-login" 으로 변환된다.-->
         </div>
       </div>
     </b-modal>
