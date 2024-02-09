@@ -67,7 +67,11 @@
 + classList() 
 > 클래스 속성을 나타내는 DOMTokenList. 클래스 속성이 설정되어 있지 않거나 비어 있다면 elementClasses.length는 0을 반환함. 
 + classList().add("active")
- > 기존 설정된 클래스 값에 "active" 클래스 값을 추가, 이미 존재한다면 무시.
+> 기존 설정된 클래스 값에 "active" 클래스 값을 추가, 이미 존재한다면 무시.
++ indexOf()
+> 배열에서 매개변수로 전달받은 요소를 찾아 첫 번째 인덱스를 반환하고 없으면 -1을 반환.
+return 값을 검사한 후 Boolean 형태로 활용할 수 있어서 배열에 클래스나 데이터가 있는지 확인하는 용도록 자주 사용.
+
 ###
 #### + event 매개변수 + 
 + console.log('event.target : ', event.target); // 이벤트가 발생한 DOM 요소

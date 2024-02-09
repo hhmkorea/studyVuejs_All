@@ -49,7 +49,14 @@
       </div>
     </section>
     <section class="notice">
-      <h1 class="mainit">공지 사항</h1>
+      <div class="noticebox">
+        <h1 class="mainit">공지 사항</h1>
+        <b-button variant="noticemore" @click="viewmore($event)"/>
+        <div class="newsitem" v-for="(item, index) in noticelists" :key="index">
+          <strong v-html="item.noticetit"></strong>
+          <span v-html="item.date"></span>
+        </div>
+      </div>
     </section>
   </section>
 </template>
@@ -160,6 +167,20 @@ export default {
           url: "https://www.facebook.com/esayspub/",
         },
       ],
+      noticelists: [
+        {
+          noticetit: "이지스퍼블리싱/이지스에듀 저작물 이용 지침",
+          date: "2023.03.30",
+        },
+        {
+          noticetit: "IT 분야 편집/기획자 모집",
+          date: "2023.02.16",
+        },
+        {
+          noticetit: "이지스퍼블리싱 전자책 대여 서비스 오픈!",
+          date: "2021.10.28",
+        },
+      ],
     };
   },
   created() { // Vue Life Cycle 중 Created() Hook. Vue 인스턴스가 생성되고 호출됨.
@@ -184,6 +205,19 @@ export default {
         window.open(url, "_blank");
       }
     },
+    viewmore(event) {
+      if(event.target.parentElement.classList.value.indexOf("full") >  -1) {
+        /* indexOf()
+         : 배열에서 매개변수로 전달받은 요소를 찾아 첫 번째 인덱스를 반환하고 없으면 -1을 반환.
+           return 값을 검사한 후 Boolean 형태로 활용할 수 있어서
+           배열에 클래스나 데이터가 있는지 확인하는 용도록 자주 사용.
+        */
+        event.target.parentElement.classList.remove("full")
+      } else {
+        event.target.parentElement.classList.add("full"); // full 클래스를 동적으로 추가.
+      }
+      //console.log(event.target.parentElement.classList);
+    }
   },
   computed: {
     autocomplate() {
