@@ -246,7 +246,7 @@ footer {
     }
 }
 
-/* 모바일 */
+/* start : 모바일 */
 @media screen and (max-width: 767px){
     nav ul > li {
         flex: auto;
@@ -340,7 +340,20 @@ footer {
         padding: 5px 15px;
         font-size: 14px;
     }
-}
+    .itembox {
+        flex-basis: 100%;
+        padding: 20px 20px 30px 20px;
+    }
+    .itembox + .itembox {
+        margin-top: 20px;
+    }
+    .itembox strong {
+        font-size: 16px;
+    }
+    .itembox .bi::before {
+        font-size: 45px;
+    }
+} /* end : 모바일 */
 .modal-open #appPage {
     z-index: 9;
     position: relative;
@@ -635,4 +648,36 @@ footer {
 }
 .autolayer.none {
     height: auto;
+}
+.bennermenu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+.itembox {
+    flex-basis: 32%;
+    padding: 30px 30px 50px 30px;
+    background: #f1f1f1;
+    border-radius: 12px;
+    position: relative;
+}
+.itembox span {
+    display: block;
+    font-size: 12px;
+}
+.itembox strong {
+    color: #222222;
+    font-size: 20px;
+}
+.itembox .bi {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+.itembox .bi::before {
+    font-size: 50px;
 }

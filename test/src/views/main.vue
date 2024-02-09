@@ -41,7 +41,13 @@
         <span v-for="(item,index) in hashdata" :key="index" v-html="item.text"></span>
       </div>
     </section>
-    <section class="bannermenu"></section>
+    <section class="bannermenu">
+      <div class="itembox">
+        <span>교수 및 강사 전용</span>
+        <strong>교재 샘플/강의 자료</strong>
+        <i class="bi bi-stickies"></i>
+      </div>
+    </section>
     <section class="notice">
       <h1 class="mainit">공지 사항</h1>
     </section>
