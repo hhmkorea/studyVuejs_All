@@ -28,10 +28,13 @@
       <div class="inputarea">
         <b-form-input v-model="keyword"/>
         <b-button variant="search"><i class="bi bi-search"></i> </b-button>
-        <div class="autolayer" v-if="keyword.length > 0">
-          <ul>
+        <div class="autolayer" v-if="keyword.length > 0" :class="{ none: autocomplate.length === 0 }">
+          <ul v-if="autocomplate.length > 0">
             <li v-for="(item, index) in autocomplate[0].books" :key="index" v-html="item.booktit"></li>
           </ul>
+          <div class="nonemesessage" v-else>
+            <i class="bi bi-x-circle-fill"></i> 검색 결과가 없습니다.
+          </div>
         </div>
       </div>
       <div class="guidehash">

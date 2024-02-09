@@ -623,5 +623,16 @@ footer {
     background-color: #dddddd;
     color: #222222;
 }
-
-
+.nonemesessage {
+    padding: 15px;
+    color: #ff0200;
+}
+.nonemesessage > .bi {
+    font-size: 15px;
+}
+.nonemesessage > .bi::before {
+    margin-top: -2px;
+}
+.autolayer.none {
+    height: auto;
+}
