@@ -1,25 +1,25 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Index from '@/components/MovieIndexPage.vue'
-import Show from '@/components/MovieDetailPage.vue'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import Index from '@/components/MovieIndexPage.vue';
+import Show from '@/components/MovieDetailPage.vue';
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
     path: '/',
     name: 'index',
-    component: Index
+    component: Index,
   },
   {
     path: '/:id',
     name: 'show',
-    component: Show
-  }
-]
+    component: Show,
+  },
+];
 
 const router = new VueRouter({
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;
