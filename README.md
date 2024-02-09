@@ -6,6 +6,8 @@
 + test : Vue.js 교재 실습
 > 프런트엔드UI개발 with Vue.js - 김윤미 지음
 > https://github.com/my-yoon/Doit-Project.git
++ test_axios : Vue.js + Express + MySQL 
+> https://marshmello.tistory.com/64 
 + ref_doc : 참고용 문서, React와 Vue.js 비교 정리, 각각의 Life Cycle 이미지.
 ###
 #### + my-pjt 시리즈  + 
