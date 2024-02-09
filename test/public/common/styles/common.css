@@ -664,6 +664,7 @@ footer {
     background: #f1f1f1;
     border-radius: 12px;
     position: relative;
+    cursor: pointer;
 }
 .itembox span {
     display: block;

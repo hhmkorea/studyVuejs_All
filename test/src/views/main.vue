@@ -42,10 +42,10 @@
       </div>
     </section>
     <section class="bannermenu">
-      <div class="itembox">
-        <span>교수 및 강사 전용</span>
-        <strong>교재 샘플/강의 자료</strong>
-        <i class="bi bi-stickies"></i>
+      <div class="itembox" v-for="(item, index) in mainbanner" :key="index" @click="gotoPage(item.url)">
+        <span v-html="item.stitle"></span>
+        <strong v-html="item.maintit"></strong>
+        <i class="bi" :class="item.iconname"></i>
       </div>
     </section>
     <section class="notice">
@@ -92,7 +92,7 @@ export default {
         dots: false,     // 하단 버튼 사용 여부
         infinite: true,  // 슬라이드 반복 여부
         responsive: [
-            // 반응형 옵션
+          // 반응형 옵션
           {
             breakpoint: 767,     // 브라우저 크기가 767 이하일 때
             settings: {
@@ -140,6 +140,26 @@ export default {
         },
       ],
       keyword: "",
+      mainbanner: [
+        {
+          stitle: "교수 및 강사 전용",
+          maintit: "교재 샘플/강의 자료",
+          iconname: "bi-stickies",
+          url: "/classsample",
+        },
+        {
+          stitle: "스터디 카페",
+          maintit: "Do it! 스터디룸",
+          iconname: "bi-book-half",
+          url: "https://cafe.naver.com/doitstudyroom",
+        },
+        {
+          stitle: "이지스 SNS",
+          maintit: "페이스북",
+          iconname: "bi-facebook",
+          url: "https://www.facebook.com/esayspub/",
+        },
+      ],
     };
   },
   created() { // Vue Life Cycle 중 Created() Hook. Vue 인스턴스가 생성되고 호출됨.
@@ -156,6 +176,13 @@ export default {
          클래스 속성이 설정되어 있지 않거나 비어 있다면 elementClasses.length는 0을 반환함.
        + classList().add("active")
        : 기존 설정된 클래스 값에 "active" 클래스 값을 추가, 이미 존재한다면 무시. */
+    },
+    gotoPage(url) {
+      if (url == "/classsample") {
+        this.$router.push(url);
+      } else {
+        window.open(url, "_blank");
+      }
     },
   },
   computed: {
