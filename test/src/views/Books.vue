@@ -93,26 +93,41 @@
             </template>
             <template v-if="tapselect === 'review'">
             <div class="detailTapCon">
+              <h1 class="tapcontit">
+                <strong>"Do it! 웹 사이트 따라 만들기"</strong>를 소개합니다.
+              </h1>
               <p>(출판사 리뷰 - ...)</p>
             </div>
             </template>
             <template v-if="tapselect === 'order'">
             <div class="detailTapCon">
+              <h1 class="tapcontit">
+                <strong>"Do it! 웹 사이트 따라 만들기"</strong>를 소개합니다.
+              </h1>
               <p>(목차 - ...)</p>
             </div>
             </template>
             <template v-if="tapselect === 'write'">
             <div class="detailTapCon">
+              <h1 class="tapcontit">
+                <strong>"Do it! 웹 사이트 따라 만들기"</strong>를 소개합니다.
+              </h1>
               <p>(저자 소개 - ...)</p>
             </div>
             </template>
             <template v-if="tapselect === 'recommendation'">
             <div class="detailTapCon">
+              <h1 class="tapcontit">
+                <strong>"Do it! 웹 사이트 따라 만들기"</strong>를 소개합니다.
+              </h1>
               <p>(추천의 글 - ...)</p>
             </div>
             </template>
             <template v-if="tapselect === 'reference'">
             <div class="detailTapCon">
+              <h1 class="tapcontit">
+                <strong>"Do it! 웹 사이트 따라 만들기"</strong>를 소개합니다.
+              </h1>
               <p>(자료실 - ...)</p>
             </div>
             </template>
