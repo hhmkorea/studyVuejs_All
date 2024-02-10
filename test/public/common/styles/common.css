@@ -371,6 +371,9 @@ footer {
         font-size: 13px;
         display: block;
     }
+    header.scrollTop:after {
+        top: 14px;
+    }
 } /* end : 모바일 */
 .modal-open #appPage {
     z-index: 9;
@@ -749,4 +752,18 @@ footer {
 }
 .noticebox.full .btn-noticemore {
     transform: rotate(90deg);
+}
+.scrollTop {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+}
+.scrollTop .topmenu {
+    display: none;
+}
+header.scrollTop::after {
+    position: fixed;
+    top: 22px;
 }

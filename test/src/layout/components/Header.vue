@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header :class="Topclass">
     <div class="topmenu">
       <div class="contentbox">
         <div class="logo">
@@ -117,8 +117,15 @@ export default {
         pass: "",
         mail: "",
         checkedtype: [],
-      }
+      },
+      Topclass: "",
     };
+  },
+  mounted() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener("scroll", this.handleScroll);
   },
   methods: {
     goToPage(target) {
@@ -140,6 +147,15 @@ export default {
         this.form.mail = "";
         this.form.checkedtype = [];
       });
+    },
+    handleScroll() {
+      const scrollTop = window.scrollY; // pageYOffset는 구형 브라우저
+      const headerTop = document.querySelector("header").clientHeight;
+      if (scrollTop < headerTop) {
+        this.Topclass = "";
+      } else {
+        this.Topclass = "scrollTop";
+      }
     },
   },
 };
