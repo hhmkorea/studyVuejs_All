@@ -45,6 +45,13 @@ export default {
     BookDetail9,
     BookDetail10
   },
+  mounted() {
+    if (!this.$router.query.tabId) {
+      this.tabIndex = 0;
+    } else {
+      this.tabIndex = Number(this.$router.query.tabId);
+    }
+  },
   data() {
     return {
       Newbooks: [
