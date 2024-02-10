@@ -76,11 +76,7 @@
             <h1 class="tapcontit">
               <strong>{{ bookName }}</strong>를 소개합니다.
             </h1>
-            <p>
-              웹 어워드 코리아 대상, 최우수상을 수상한 현직 웹 퍼빌리셔의 작업 방식 그대로<br/>
-              웹 사이트 하나 통째로 만들면 나도 어느새 웹 퍼블리셔!!<br/>
-              이 책 한 권이면 웹 사이트 하나가 뚝딱 완성
-            </p>
+            <p>{{ bookDec }}</p>
           </div>
         </template>
         <template v-if="tapselect === 'review'">

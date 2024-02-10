@@ -2,7 +2,10 @@
   <Subpage :pageit="'도서 소개'">
     <div class="bookpage">도서 소개
       <VueSlickCarousel class="subpageslider" v-bind="settings">
-        <div class="rollimg" v-for="(item, index) in Newbooks" :key="index">
+        <div class="rollimg"
+             v-for="(item, index) in Newbooks"
+             :key="index"
+             @click="Clicklink(index)">
           <span class="imgbox"><img :src="item.imgurl"/></span>
           <strong v-html="item.name"></strong>
         </div>
@@ -10,7 +13,7 @@
       <component :is="componentslist[tabIndex]"
                  :bookUrl="Newbooks[tabIndex].imgurl"
                  :bookName="Newbooks[tabIndex].name"
-                 :bookDec="Newbooks[tabIndex].dec" >
+                 :bookDec="Newbooks[tabIndex].subdec" >
       </component>
     </div> <!--<slot>으로 대체될 영역-->
   </Subpage>
@@ -130,6 +133,14 @@ export default {
       ],
       tabIndex: 0,
     };
+  },
+  methods: {
+    Clicklink(tabIndex) {
+      if (!(this.$route.query.tabId == tabIndex)) {
+        this.tabIndex = tabIndex;
+        return this.$router.push("/book?tabId=" + tabIndex);
+      }
+    },
   },
 };
 </script>
