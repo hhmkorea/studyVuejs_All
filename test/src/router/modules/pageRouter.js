@@ -1,12 +1,17 @@
 const pageRouter = {
-    path: "/",  // 홈화면
+    path: "/",  // 홈
     name: "layout",
     component: () => import("@/layout/index.vue"),
     children: [
         {
-            path: "/main", // 메인 영역이 보임.
+            path: "/main", // 메인
             name: "main",
             component: () => import("@/views/main.vue"),
+        },
+        {
+            path: "/book", // 도서 소개
+            name: "book",
+            component: () => import("@/views/Books.vue"),
         },
     ],
 };

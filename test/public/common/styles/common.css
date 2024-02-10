@@ -374,6 +374,9 @@ footer {
     header.scrollTop:after {
         top: 14px;
     }
+    .titlebar > h1 {
+        font-size: 20px;
+    }
 } /* end : 모바일 */
 .modal-open #appPage {
     z-index: 9;
@@ -766,4 +769,30 @@ footer {
 header.scrollTop::after {
     position: fixed;
     top: 22px;
+}
+.subpage {
+    padding: 50px 0 100px;
+}
+.titlebar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px #dddddd;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    background: url("/images/event-end-img.png") left top/100%;
+}
+.titlebar > h1 {
+    font-size: 35px;
+    font-weight: 900;
+    color: #66635b;
+}
+.pagenavi {
+    color: #aeaeae;
+}
+.pagenavi > strong {
+    color: #222222;
+    display: inline-block;
+    background: url("/images/icon_16_arrow_small_right.svg") no-repeat 0 center/16px;
+    padding-left: 16px;
 }
