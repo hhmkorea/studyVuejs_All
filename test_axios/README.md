@@ -1,6 +1,10 @@
 # test_axios : 데이터 바이딩 테스트 
-+ 참고 자료: https://marshmello.tistory.com/64
-#
+###
+### + 참고 자료 + 
+> https://marshmello.tistory.com/64
++ 위의 소스 그대로 하면 에러 발생함!
++ 원인은 버전 충돌로 Vue3으로 아래와 같이 설치한 뒤 그에 관련된 문법으로 수정해야함.
+###
 ### + 환경 설정 + 
 + Vue.js + Express + Axios
 + root :
