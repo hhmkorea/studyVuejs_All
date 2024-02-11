@@ -17,9 +17,9 @@ export default {
     return {
       lists: [
         {
-          imag: "/images/books_image/book01.jpg",
-          title: "Do it! 실습 파일과 학습 파일 내려받기",
-          date: "2019.05.15",
+          img: "/images/books_image/book01.jpg",
+          title: "'Do it! 웹 사이트 따라만들기' 실습 파일과 학습 파일 내려받기",
+          date: "2019.04.15",
           dec : "책을 다 공부한 독자를 위한 실전 프로젝트입니다. <br />" +
               "웹 사이트에서 자주 사용하는 '이미지 슬라이드 쇼' 프로그램을 " +
               "만드는 방법을 단계별로 공부할 수 있습니다.",
@@ -27,8 +27,8 @@ export default {
           link2: "", // 정오표 경로
         },
         {
-          imag: "/images/books_image/book05.jpg",
-          title: "Do it! SQL입문 실습 파일과 학습 파일 내려받기",
+          img: "/images/books_image/book05.jpg",
+          title: "'Do it! SQL입문' 실습 파일과 학습 파일 내려받기",
           date: "2022.11.15",
           dec : "책을 다 공부한 독자를 위한 실전 프로젝트입니다. <br />" +
               "'SQL'을 기초 문법부터 단계별로 공부할 수 있습니다,",

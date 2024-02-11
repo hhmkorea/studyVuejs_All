@@ -1022,3 +1022,10 @@ header.scrollTop::after {
     border-radius: 0;
     line-height: 28px;
 }
+.movieclasspage .listnum storng,
+.movieclasspage .listdetail > strong {
+    color: #7952b3;
+}
+.movieclasspage .btn-listdown {
+    background-color: #7952b3;
+}
