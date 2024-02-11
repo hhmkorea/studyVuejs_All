@@ -1080,6 +1080,6 @@ header.scrollTop::after {
     color: #222222;
 }
 .introgroup:nth-of-type(2) {
-    background: url("/images/main_ico1.png") no-repeat left 0px/100px;
+    background: url("/images/main_ico1.png") no-repeat left 0px/200px;
     padding: 0 0 0 300px;
 }
