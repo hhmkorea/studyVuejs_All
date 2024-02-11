@@ -2,3 +2,6 @@
 /test_axios/frontend/node_modules/
 /test_axios/node_modules/
 /test_axios/backend/public/
+/.idea/
+/test_axios/.idea/
+/test_MySQL/.idea/
