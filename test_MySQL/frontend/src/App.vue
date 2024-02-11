@@ -5,9 +5,9 @@
 </template>
 
 <script>
-import CurrentWeather from "@/components/CurrentWeather.vue";
+import CurrentWeather from "./components/CurrentWeather.vue";
 import axios from "axios";
-import {reactive} from "vue";
+import { reactive } from "vue";
 
 export default {
   name: "App",
@@ -25,7 +25,7 @@ export default {
       },
     });
     axios.get("/api/weather").then((res) => {
-      state.weather = res.data;
+      state.data = res.data.data[1];
     });
     return {
       state,

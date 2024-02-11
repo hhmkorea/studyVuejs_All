@@ -1,14 +1,8 @@
-const { defineConfig } = require('@vue/cli-service')
-/*
-module.exports = defineConfig({
-  transpileDependencies: true
-})
-*/
 module.exports = {
   devServer: {
     proxy: {
       "/api": {
-        target: "http://localhost:3000",
+        target: "http://localhost:3000", // API 서버의 주소
       },
     },
   },

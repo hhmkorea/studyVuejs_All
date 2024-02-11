@@ -24,9 +24,10 @@
 <script>
 export default {
   name: "CurrentWeather",
+
   props: {
     state: Object,
-  }
+  },
 };
 </script>
 
