@@ -35,9 +35,14 @@ const pageRouter = {
             component: () => import("@/views/reference.vue"),
         },
         {
-            path: "/movieclass", //s 동영상 강의
+            path: "/movieclass", // 동영상 강의
             name: "movieclass",
             component: () => import("@/views/movieclass.vue"),
+        },
+        {
+            path: "/classsample", // 교재 샘플
+            name: "classsample",
+            component: () => import("@/views/classsample.vue"),
         },
     ],
 };
