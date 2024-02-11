@@ -44,6 +44,11 @@ const pageRouter = {
             name: "classsample",
             component: () => import("@/views/classsample.vue"),
         },
+        {
+            path: "/company", // 회사 소개
+            name: "company",
+            component: () => import("@/views/company.vue"),
+        },
     ],
 };
 export default pageRouter;
