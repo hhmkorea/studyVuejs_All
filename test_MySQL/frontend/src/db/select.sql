@@ -1,0 +1,1 @@
+SELECT * FROM weather_test.weather_data;
