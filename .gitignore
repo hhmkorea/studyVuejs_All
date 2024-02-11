@@ -6,3 +6,5 @@
 /test_axios/frontend/node_modules/
 /test_axios/node_modules/
 /test_MySQL/.idea/
+/test/node_modules/
+/test/dist/
