@@ -30,11 +30,11 @@ export default {
     axios.get('/api/movies/'+id+'')
         .then((res) => {
           this.movie = res.data[0];
-          console.log(res);
+          console.log(res.data);
+          //console.log(JSON.stringify(res.data)); // json 형태로 보여줌
         })
         .catch((err) => {
           alert(err);
-          console.log(err);
         });
   },
   data () {

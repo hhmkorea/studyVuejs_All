@@ -1,17 +1,29 @@
 import { createWebHistory, createRouter } from 'vue-router';
-import Index from '@/components/MovieIndexPage.vue';
+import TestList from '@/components/TestList.vue';
+import MovieLIst from '@/components/MovieIndexPage.vue';
 import Show from '@/components/MovieDetailPage.vue';
+import Weather from '@/components/CurrentWeather.vue';
 
 const routes = [
   {
     path: '/',
-    name: 'index',
-    component: Index,
+    name: 'testList',
+    component: TestList,
   },
   {
-    path: '/:id',
+    path: '/movieList',
+    name: 'movieList',
+    component: MovieLIst,
+  },
+  {
+    path: '/movieList/:id',
     name: 'show',
     component: Show,
+  },
+  {
+    path: '/weather',
+    name: 'weather',
+    component: Weather,
   },
 ];
 
