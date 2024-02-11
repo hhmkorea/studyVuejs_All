@@ -29,13 +29,13 @@ export default {
     // 컴포넌트가 생성될 때, /api/movies에 요청을 보냅니다.          
     axios.get('/api/movies')
         .then((res) => {
-          this.movies = res.data
+          this.movies = res.data;
           console.log(res);
         })
-        .catch(err => {
-        alert(err);
-        console.log(err);
-      });
+        .catch((err) => {
+          alert(err);
+          console.log(err);
+        });
   },
   data () {
     return {
