@@ -60,7 +60,8 @@
 + indexOf()
 > 배열에서 매개변수로 전달받은 요소를 찾아 첫 번째 인덱스를 반환하고 없으면 -1을 반환.
 return 값을 검사한 후 Boolean 형태로 활용할 수 있어서 배열에 클래스나 데이터가 있는지 확인하는 용도록 자주 사용.
-
++ () => : 화살표 함수, Arrow function
++ ... : 전개 연산자, spread operator
 ###
 #### + event 매개변수 +
 + console.log('event.target : ', event.target); // 이벤트가 발생한 DOM 요소
