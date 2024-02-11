@@ -1,4 +1,5 @@
-# test_axios : 데이터 바이딩 테스트 
+# test_axios 
+### : 데이터 바이딩 테스트 (Vue.js + Express + Axios)
 ###
 ### + 참고 자료 + 
 > https://marshmello.tistory.com/64
@@ -6,8 +7,7 @@
 + 원인은 버전 충돌로 Vue3으로 아래와 같이 설치한 뒤 그에 관련된 문법으로 수정해야함.
 ###
 ### + 환경 설정 + 
-+ Vue.js + Express + Axios
-+ root :
++ root : vue/cli, axios, express 설치 
 > npm install -g @vue/cli
 
 > vue create frontend
@@ -18,9 +18,9 @@
 > npm install -g express-generator 
 
 > express --view=pug backend
-+ frontend :
++ frontend : Vue3 프로젝트 생성, vue-router 설치, router/index.js 추가.
 > npm install vue-router@next 
-+ backend : 
++ backend : express 프로젝트 생성.
 ###
 ### + 프로젝트 테스트 +
 + frontend :
