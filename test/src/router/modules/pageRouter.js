@@ -17,9 +17,9 @@ const pageRouter = {
         {
             path: "/book", // 도서 소개
             name: "book",
-            component: () => import("@/views/Books.vue"),
+            component: () => import("@/views/Books.vue"), // () => : 화살표 함수, Arrow function
         },
-        ...withPrefix("/book", [
+        ...withPrefix("/book", [ // ... : 전개 연산자 spread operator
             {
                 path: "/",
                 component: () => import("@/views/Books.vue"),
@@ -29,6 +29,16 @@ const pageRouter = {
                 component: () => import("@/views/Books.vue"),
             },
         ]),
+        {
+            path: "/reference", // 자료실
+            name: "reference",
+            component: () => import("@/views/reference.vue"),
+        },
+        {
+            path: "/movieclass", //s 동영상 강의
+            name: "movieclass",
+            component: () => import("@/views/movieclass.vue"),
+        },
     ],
 };
 export default pageRouter;

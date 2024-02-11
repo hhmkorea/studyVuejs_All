@@ -962,3 +962,63 @@ header.scrollTop::after {
 .detailTapCon > P {
     margin-bottom: 20px;
 }
+.subpageguide {
+    margin-bottom: 30px;
+    color: #ababab;
+}
+.listnum strong {
+    color: #dc3545;
+}
+.listbox {
+    margin-top: 20px;
+    padding: 20px;
+    border: solid 1px #dddddd;
+}
+.listitem {
+    display: flex;
+    margin-top: 30px;
+    padding-bottom: 20px;
+    border-bottom: solid 1px #dddddd;
+}
+.listitem:nth-of-type(1) {
+    margin-top: 0;
+}
+.listhum {
+    width: 160px;
+}
+.listhum img {
+    max-width: 100%;
+}
+.listdetail {
+    flex: 1;
+    padding: 10px 0 0 40px;
+}
+.listdetail > strong {
+    display: block;
+    margin-bottom: 10px;
+    padding: 0 0 10px;
+    border-bottom: solid 1px #dddddd;
+    font-size: 20px;
+    color: #dd868a;
+}
+.listdate {
+    text-align: right;
+    color: #ababab;
+    font-size: 13px;
+}
+.itembtns {
+    margin: 10px 0 20px;
+}
+.btn-listdown {
+    display: inline-block;
+    height: 30px;
+    padding: 0 20px;
+    margin-right: 10px;
+    min-width: 140px;
+    font-size: 14px;
+    background-color: #dd868a;
+    color: #ffffff;
+    width: auto;
+    border-radius: 0;
+    line-height: 28px;
+}
