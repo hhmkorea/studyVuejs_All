@@ -1,10 +1,7 @@
-/.idea/
+/test/.idea/
 /test/dist/
 /test/node_modules/
 /test_axios/.idea/
-/test_mysql/.idea/
 /test_axios/node_modules/
-/test_mysql/backend/node_modules/
+/test_mysql/.idea/
 /test_mysql/node_modules/
-/test_mysql_bak/
-/test_axios/.idea/
