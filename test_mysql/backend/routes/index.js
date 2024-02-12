@@ -1,20 +1,21 @@
 const express = require('express');
 const router = express.Router();
 const port = 3000;
+const database = require("./database");
 
-const weather = {
-  weather: "맑음",
-  curr_temp: 24,
-  highest_temp: 25,
-  lowest_temp: 19,
-};
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
 router.get("/api/weather", (req, res) => {
-  res.send(weather);
+  database.query("SELECT * FROM weather_test.weather_data", (err, data) => {
+    if (!err) {
+      res.send({ data });
+    } else {
+      console.log(err);
+    }
+  })
 });
 
 /*router.listen(port, () => {

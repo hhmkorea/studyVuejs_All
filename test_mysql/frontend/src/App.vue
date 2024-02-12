@@ -25,7 +25,7 @@ export default {
       },
     });
     axios.get("/api/weather").then((res) => {
-      state.weather = res.data;
+      state.weather = res.data.data[1];
     });
 
     return {
