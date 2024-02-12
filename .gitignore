@@ -10,3 +10,4 @@
 /test_mysql/node_modules/
 /test_mysql/backend/node_modules/
 /test_mysql/frontend/node_modules/
+/test_mysql/frontend/dist/

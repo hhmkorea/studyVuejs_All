@@ -1052,7 +1052,7 @@ header.scrollTop::after {
     max-width: 480px;
     margin: 0 auto;
 }
-.classsample.form-group > label {
+.classsample .form-group > label {
     flex-basis: 130px;
 }
 .classsample .form-group > div {
