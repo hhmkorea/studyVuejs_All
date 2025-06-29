@@ -17,3 +17,12 @@
 #
 #
 #
+* 참고 서적 3 : Vue.js 프런트엔드 개발입문 - 김기수 
+  * 소스 URL : https://github.com/gilbutITbook/080384
+  * cdn-vue : 
+  * npm-vue :
+  * basic-vue : calculator, cart, todo, pinia  
+* 참고 서적 4 : Vue3 풀스텍 실전 웹프로젝트 - 김기태, 김대철 
+  * 소스 URL : https://github.com/kitaedev365/vuejs3
+  * vue3-fullstack : 
+  
