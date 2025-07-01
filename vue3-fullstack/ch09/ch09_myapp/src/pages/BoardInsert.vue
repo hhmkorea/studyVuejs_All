@@ -7,7 +7,7 @@
           <label>제목:</label><input v-model="board.title" required />
         </div>
         <div class="pure-control-group">
-          <label>내용:</label><input v-model="board.content" required />
+          <label>내용:</label><textarea v-model="board.content" required></textarea>
         </div>
         <div class="pure-control-group">
           <label>작성자:</label><input v-model="board.author" required />

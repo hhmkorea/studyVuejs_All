@@ -23,3 +23,4 @@ INSERT INTO board (title, content, author) VALUES
 COMMIT;
 
 SELECT * FROM board;
+alter table board convert to charset utf8;
