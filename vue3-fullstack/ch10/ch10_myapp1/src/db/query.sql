@@ -15,6 +15,7 @@ CREATE TABLE product
     hits     INT      DEFAULT 0
 );
 
+truncate product;
 INSERT INTO product (cate, pname, pcontent, img1, img2, img3)
 VALUES
   ('Category 1', 'Product 1', 'This is the first product', 'img1a.jpg', 'img1b.jpg', 'img1c.jpg'),
