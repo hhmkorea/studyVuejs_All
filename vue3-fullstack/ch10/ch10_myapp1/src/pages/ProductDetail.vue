@@ -9,7 +9,7 @@
       <p><strong>조회수:</strong>{{ product.hits }}</p>
       <div class="grid-x grid-padding-x">
         <div class="medium-4 cell" v-for="(img, index) in product.images" :key="index">
-          <img :src="img" alt="상품 이미지" style="width: 100%" />
+          <img :src="img" alt="상품 이미지" style="width: 100%;" />
         </div>
       </div>
       <button class="button" @click="editProduct">[상품 정보 수정]</button>
@@ -45,7 +45,7 @@ const editProduct = () => {
 const deleteProduct = async () => {
   if (confirm('정말로 이 상품을 삭제하시겠습니까?')) {
     await store.dispatch('deleteProduct', pno);
-    router.push({ name: 'ProductList' });
+    await router.push({ name: 'ProductList' });
   }
 };
 
@@ -58,5 +58,5 @@ const formatDate = (dateStr) => {
   return date.toLocaleString();
 };
 
-onMounted(() => fetchProduct());
+onMounted(() => { fetchProduct() });
 </script>

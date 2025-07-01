@@ -26,3 +26,5 @@ VALUES
 commit;
 
 select * from product;
+
+alter table product convert to charset utf8; -- 테이블 한글 입력 가능하게 설정 변경.
