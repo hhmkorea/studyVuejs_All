@@ -10,22 +10,22 @@ const routes = [
   {
     path: '/boards',
     name: 'boards',
-    component: () => import(/* webpackChunkName: "boards" */'@/pages/BoardList.vue'),
+    component: () => import(/* webpackChunkName: "boards" */ '@/pages/BoardList.vue'),
   },
   {
     path: '/boards/insert',
     name: 'boards-insert',
-    component: () => import(/* webpackChunkName: "board-insert" */'@/pages/BoardInsert.vue'),
+    component: () => import(/* webpackChunkName: "board-insert" */ '@/pages/BoardInsert.vue'),
   },
   {
     path: '/boards/detail/:no',
     name: 'boards-detail',
-    component: () => import(/* webpackChunkName: "board-detail" */'@/pages/BoardDetail.vue'), props: true,
+    component: () => import(/* webpackChunkName: "board-detail" */ '@/pages/BoardDetail.vue'), props: true,
   },
   {
     path: '/boards/edit/:no',
     name: 'boards-edit',
-    component: () => import(/* webpackChunkName: "board-edit" */'@/pages/BoardEdit.vue'), props: true,
+    component: () => import(/* webpackChunkName: "board-edit" */ '@/pages/BoardEdit.vue'), props: true,
   },
 ];
 

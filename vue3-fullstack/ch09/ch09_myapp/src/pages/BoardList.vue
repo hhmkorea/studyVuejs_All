@@ -4,7 +4,7 @@
       <h1>게시판 목록</h1>
       <ul class="pure-menu-list">
         <li class="pure-menu-item" v-for="board in boards" :key="board.no">
-          <router-link class="pure-menu-link" to="'/boards/detail/' + board.no">{{ board.title }}</router-link>
+          <router-link class="pure-menu-link" :to="'/boards/detail/' + board.no">{{ board.title }}</router-link>
           <router-link class="pure-button pure-button-primary" to="/boards/insert">[글등록]</router-link>
         </li>
       </ul>
