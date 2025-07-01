@@ -1,4 +1,5 @@
 /.idea/
+/.metadata/
 /test/.idea/
 /test/dist/
 /test/node_modules/
@@ -47,7 +48,8 @@
 /vue3-fullstack/ch05/ch05_myapp2/dist/
 /vue3-fullstack/ch09/ch09_myapp/node_modules/
 /vue3-fullstack/ch09/ch09_myapp/dist/
+/vue3-fullstack/ch09/backend/
 /vue3-fullstack/ch10/ch10_myapp1/node_modules/
 /vue3-fullstack/ch10/ch10_myapp1/dist/
-/.metadata/
-/vue3-fullstack/ch09/backend/
+/vue3-fullstack/ch10/backend1/
+/vue3-fullstack/ch10/ch10_myapp1/.idea/

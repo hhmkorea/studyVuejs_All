@@ -45,7 +45,7 @@
 <script setup>
 import {useStore} from "vuex";
 import {useRouter} from "vue-router";
-import {computed, onMounted, ref} from "vue";
+import {ref} from "vue";
 
 const store = useStore();
 const router = useRouter();
