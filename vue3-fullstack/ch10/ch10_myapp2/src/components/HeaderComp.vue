@@ -3,7 +3,7 @@
   <div class="navbar-brand">
     <router-link to="/" class="navbar-item">
       자료실 애플리케이션
-    </router-link>
+    </router-link> <hr />
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
@@ -12,9 +12,9 @@
   </div>
     <div id="navbarBasic" class="navbar-menu">
       <div class="navbar-start">
-        <router-link to="/" class="navbar-item">메인으로 이동</router-link>
-        <router-link to="/datalist" class="navbar-item">자료실 목록</router-link>
-        <router-link to="/datainsert" class="navbar-item">자료 등록</router-link>
+        | <router-link to="/" class="navbar-item">메인으로 이동</router-link>
+        | <router-link to="/datalist" class="navbar-item">자료실 목록</router-link> |
+        <router-link to="/datainsert" class="navbar-item">자료 등록</router-link> |<hr/>
       </div>
     </div>
   </nav>
