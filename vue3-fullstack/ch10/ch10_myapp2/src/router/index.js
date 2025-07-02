@@ -18,7 +18,7 @@ const routes = [
   },
   {
     path: '/datainsert',
-    name: 'DataInsert',
+    name: 'DataInsert',                                                                                                      
     component: DataInsert,
   },
   {
