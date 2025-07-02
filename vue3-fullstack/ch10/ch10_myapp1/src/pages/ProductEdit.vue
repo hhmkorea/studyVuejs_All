@@ -15,10 +15,15 @@
         </div>
         <div class="medium-4 cell" v-for="(img, index) in editableProduct.images" :key="index">
           <label>상품이미지 {{ index + 1 }}
-            <input type="file" @change="handleFileChange(index)" accept="image/**"/>
+            <input type="file" @change="handleFileChange(index)" accept="image/*" />
             <img :src="img" alt="현재 이미지" style="width: 100%; margin-top: 0.5rem;"/>
           </label>
         </div>
+<!--        <div>-->
+<!--          <img src="http://localhost:8081/uploads/img1a.jpg"  alt="" style="width: 100%; margin-top: 0.5rem;" />-->
+<!--          <img src="http://localhost:8081/uploads/img1b.jpg"  alt="" style="width: 100%; margin-top: 0.5rem;" />-->
+<!--          <img src="http://localhost:8081/uploads/img1c.jpg"  alt="" style="width: 100%; margin-top: 0.5rem;" />-->
+<!--        </div>-->
         <div class="medium-6 cell">
           <p><strong>등록일시:</strong>{{ formatDate(editableProduct.resdate) }}</p>
         </div>
