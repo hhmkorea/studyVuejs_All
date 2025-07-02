@@ -41,3 +41,7 @@ INSERT INTO board_post VALUES (DEFAULT, '제목4', '더미 데이터 내용4');
 INSERT INTO board_post VALUES (DEFAULT, '제목5', '더미 데이터 내용5');
 
 COMMIT;
+
+
+select * from dataroom;
+select * from board_post;
