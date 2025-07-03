@@ -1,3 +1,7 @@
 <template>
-  <h1>MainComp</h1>
+  <div class="text-center">
+    <h1>Task Manager</h1><hr />
+    <p>Flux 패턴을 활용한 Vue 3 애플리케이션입니다.</p>
+    <router-link to="/tasks" class="btn btn-primary mt-3">태스크 목록</router-link>
+  </div>
 </template>

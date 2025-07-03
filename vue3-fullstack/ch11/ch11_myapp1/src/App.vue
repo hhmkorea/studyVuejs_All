@@ -1,6 +1,14 @@
 <template>
-  <router-view/>
+  <div id="app" class="d-flex flex-column min-vh-100">
+    <HeaderComp />
+    <router-view/>
+    <main class="flex-fill container mt-4">
+      <router-view/>
+    </main>
+    <FooterComp />
+  </div>
 </template>
-
-<style>
-</style>
+<script setup>
+import HeaderComp from "@/components/HeaderComp.vue";
+import FooterComp from "@/components/FooterComp.vue";
+</script>
