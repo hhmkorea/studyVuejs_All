@@ -9,6 +9,12 @@
         </div>
       </div>
       <div class="field">
+        <label class="label">글 내용</label>
+        <div class="control">
+          <textarea class="textarea" v-model="data.content" required ></textarea>
+        </div>
+      </div>
+      <div class="field">
         <label class="label">작성자</label>
         <div class="control">
           <input class="input" type="text" v-model="data.author" required />

@@ -54,11 +54,11 @@ export const useProductStore = defineStore(
                         if (!response.ok)
                             throw new Error('Failed to update data');
                         const updatedData = await response.json();
-                        const index = this.dataList.findIndex((data) => data.no === updatedData.dno);
+                        const index = this.dataList.findIndex((data) => data.dno === updatedData.dno);
                         if (index !== -1) {
                             this.dataList.slice(index, 1, updatedData);
                         }
-                        this.dataList.push(updatedData);
+                        this.currentData = updatedData;
                     } catch (e) {
                         console.error('Error update data...', e);
                     }
