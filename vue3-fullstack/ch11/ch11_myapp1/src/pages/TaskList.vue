@@ -7,7 +7,7 @@
     <div v-else>
       <ul class="list-group">
         <li v-for="task in store.tasks" :key="task.id" class="list-group-item d-flex justify-content-between align-items-center">
-          <router-link to="`/tasks/${task.id}`" class="text-decoration-none">{{ task.title }}</router-link>
+          <router-link :to="`/tasks/${task.id}`" class="text-decoration-none">{{ task.title }}</router-link>
           <span v-if="task.completed" class="badge bg-success">완료</span>
           <span v-else class="badge bg-warning">진행 중</span>
         </li>
