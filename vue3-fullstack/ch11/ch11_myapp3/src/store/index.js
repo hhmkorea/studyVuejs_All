@@ -12,7 +12,7 @@ const state = reactive({
     movies: [],
     loading: false,
     error: null,
-    reviews: {...dummyReviews}, // 초기 리뷰 데이터
+    reviews: { ...dummyReviews }, // 초기 리뷰 데이터
 });
 
 const actions = {

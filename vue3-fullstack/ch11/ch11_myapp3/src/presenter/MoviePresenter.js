@@ -27,6 +27,7 @@ export default class MoviePresenter {
             this.view.displayError(e);
         }
     }
+
     addReview(movieId, review) {
         try {
             store.addReview(movieId, review);

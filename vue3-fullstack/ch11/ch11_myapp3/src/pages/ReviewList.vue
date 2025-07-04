@@ -3,7 +3,7 @@
     <h4>리뷰 목록</h4>
     <ul class="collection">
       <li v-for="(review, index) in reviews" :key="index" class="collection-item">
-        <span class="title">{{ reviews.author }}</span>
+        <span class="title">{{ review.author }}</span>
         <p>{{ review.content }}</p>
       </li>
     </ul>
