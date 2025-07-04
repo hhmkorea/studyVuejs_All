@@ -27,6 +27,7 @@
             </div>
             <div class="input-field">
               <textarea v-model="newReview.content" id="content" class="materialize-textarea" required></textarea>
+              <label for="content">리뷰 내용</label>
             </div>
             <button class="btn waves-effect waves-light" type="submit">리뷰 등록</button>
           </form>
@@ -45,9 +46,9 @@
 <script setup>
 import {useRoute, useRouter} from "vue-router";
 import {computed, ref} from "vue";
-import M from 'materialize-css';
 import ReviewList from "./ReviewList.vue";
 import store from "../store/index.js";
+import M from 'materialize-css';
 
 const route = useRoute();
 const router = useRouter();

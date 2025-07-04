@@ -31,8 +31,8 @@ export default class MoviePresenter {
         try {
             store.addReview(movieId, review);
             this.view.displaySuccess('리뷰가 성공적으로 추가되었습니다.');
-        } catch (e) {
-            this.view.displayError(e);
+        } catch (error) {
+            this.view.displayError(error);
         }
     }
 }
