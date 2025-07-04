@@ -1,4 +1,3 @@
-import { createStore } from 'vuex'
 import axios from "axios";
 import {reactive} from "vue";
 
@@ -28,7 +27,7 @@ const actions = {
     state.error = null;
 
     try {
-      const promises = regions.map(regions => { // 무료로 사용할 수 있는 Open-Meteo API 할용
+      const promises = regions.map(region => { // 무료로 사용할 수 있는 Open-Meteo API 할용
         const { lat, lon } = region.coords;
         return axios.get(`https://api.open-meteo.com/v1/forecast`, {
           params: {
