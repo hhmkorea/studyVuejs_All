@@ -2,7 +2,7 @@
   <div class="section">
     <h2 class="center-align">영화 목록</h2>
     <div v-if="store.loading" class="progress">
-      <div class="interminate"></div>
+      <div class="indeterminate"></div>
     </div>
     <div v-else>
       <ul class="collection">

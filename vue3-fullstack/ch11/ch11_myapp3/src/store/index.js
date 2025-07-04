@@ -20,7 +20,7 @@ const actions = {
         state.loading = true;
         state.error = null;
         try {
-            const targetDt = '20250701'; //getTodayDate(); // 당일 데이터 로딩이 힘들경우 임시 값 적용.
+            const targetDt = getTodayDate(); // '20250701'; // 전일 데이터 로딩이 힘들경우 임시 값 적용.
             console.log(targetDt);
             const apiKey = '2593815e038e0527e151e5d398c6273a'; // API Key는 별도로 발급받아 넣기
             const response = await axios.get('http://www.kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json',
@@ -50,7 +50,7 @@ const getTodayDate = () => {
     const today = new Date();
     const year = today.getFullYear();
     const month = String(today.getMonth() + 1).padStart(2, '0');
-    const day = String(today.getDate()).padStart(2, '0');
+    const day = String(today.getDate() - 1).padStart(2, '0'); // 전일 데이타 로딩
     return `${year}${month}${day}`;
 }
 
