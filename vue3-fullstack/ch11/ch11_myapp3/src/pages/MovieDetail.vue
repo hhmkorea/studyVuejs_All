@@ -13,7 +13,7 @@
           <p><strong>영화명 : </strong>{{ movie.movieNm}}</p>
           <p><strong>개봉일 : </strong>{{ movie.openDt}}</p>
           <p><strong>관객수 : </strong>{{ movie.audiCnt}}명</p>
-          <p><strong>누적관객수 : </strong>{{ movie.audiAcc}}명</p>
+          <p><strong>누적 관객수 : </strong>{{ movie.audiAcc}}명</p>
         </div>
       </div>
       <ReviewList :movieId="movie.movieCd" /><!-- 리뷰 목록 -->
