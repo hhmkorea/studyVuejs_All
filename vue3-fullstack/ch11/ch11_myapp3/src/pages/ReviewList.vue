@@ -25,4 +25,6 @@ const props = defineProps({
 });
 
 const reviews = computed(() => store.getReviewsByMovieId(props.movieId));
+
+console.log("reviews : " + reviews.value);
 </script>

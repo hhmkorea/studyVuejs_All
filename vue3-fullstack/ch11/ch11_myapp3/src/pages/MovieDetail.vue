@@ -48,7 +48,7 @@ import {useRoute, useRouter} from "vue-router";
 import {computed, ref} from "vue";
 import ReviewList from "./ReviewList.vue";
 import store from "../store/index.js";
-import M from 'materialize-css';
+import M from "materialize-css";
 
 const route = useRoute();
 const router = useRouter();
@@ -56,7 +56,8 @@ const router = useRouter();
 const movieId = computed(() => route.params.id);
 const movie = computed(() => store.getMovieById(movieId.value));
 
-console.log(movie);
+console.log("movieId : " + movieId.value);
+console.log("movie : " + movie.value);
 
 const newReview = ref({
   author: '',
