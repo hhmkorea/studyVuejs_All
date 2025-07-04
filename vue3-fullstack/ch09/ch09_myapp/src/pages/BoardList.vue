@@ -34,5 +34,5 @@ const fetchBoards = () => {
         });
   });
 };
-onMounted(fetchBoards);
+onMounted(fetchBoards); // 게시판 목록 불러오기.
 </script>

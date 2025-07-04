@@ -57,8 +57,8 @@ const changePage = (page) => {  // 페이지 변경
     currentPage.value = page;
   }
 };
-onMounted(() => {  // 컴포넌트 마운트 시 상품 목록 불러오기
-  fetchProducts();
+onMounted(() => {  // 컴포넌트 마운트 시
+  fetchProducts(); // 상품 목록 불러오기
 });
 </script>
 <style scoped>

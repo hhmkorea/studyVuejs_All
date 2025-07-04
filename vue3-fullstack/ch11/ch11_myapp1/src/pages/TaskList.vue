@@ -25,7 +25,7 @@ import {onMounted} from "vue";
 
 const storeRef = store;
 onMounted(() => {
-  storeRef.actions.fetchTasks();
+  storeRef.actions.fetchTasks(); // store에서 더미 데이터 불러오기.
 });
 </script>
 

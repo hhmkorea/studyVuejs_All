@@ -29,7 +29,7 @@ import {onMounted} from "vue";
 
 const storeRef = store;
 onMounted(() => {
-  storeRef.actions.fetchWeatherData();
+  storeRef.actions.fetchWeatherData(); // store에서 날씨 데이터 불러오기.
 });
 </script>
 
