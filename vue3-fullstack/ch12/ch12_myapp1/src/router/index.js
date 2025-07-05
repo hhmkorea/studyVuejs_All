@@ -1,0 +1,37 @@
+import HomeComp from "@/components/HomeComp.vue";
+import {createRouter, createWebHistory} from "vue-router";
+import BoardList from "@/components/BoardList.vue";
+import BoardDetail from "@/components/BoardDetail.vue";
+import BoardInsert from "@/components/BoardInsert.vue";
+import BoardEdit from "@/components/BoardEdit.vue";
+
+const routes = [
+    { path: '/', component: HomeComp },
+    { path: '/boards', component: BoardList },
+    { path: '/boards/list', name: 'BoardList', component: BoardList },
+    { path: '/boards/detail/:no', name: 'BoardDetail', component: BoardDetail },
+    { path: '/boards/insert', name: 'BoardInsert', component: BoardInsert },
+    { path: '/boards/edit/:no', name: 'BoardEdit', component: BoardEdit },
+/*    { path: '/qna', component: QnAList },
+    { path: '/qna/list', name: 'QnAList', component: QnAList },
+    { path: '/qna/detail/:qno', name: 'QnADetail', component: QnADetail },
+    { path: '/qna/insert', name: 'QnAInsert', component: QnAInsert },
+    { path: '/qna/edit/:qno', name: 'QnAEdit', component: QnAEdit },
+    { path: '/qna/answer/:qno', name: 'AnswerInsert', component: AnswerInsert },
+    { path: '/dataroom', component: DataRoomList },
+    { path: '/dataroom/list', name: 'DataRoomList', component: DataRoomList },
+    { path: '/dataroom/:dno', name: 'DataRoomDetail', component: DataRoomDetail },
+    { path: '/dataroom/create', name: 'CreateDataRoom', component: CreateDataRoom },
+    { path: '/dataroom/edit/:dno', name: 'DataRoomEdit', component: DataRoomEdit },
+    { path: '/products', component: ProductList },
+    { path: '/products/list', name: 'ProductList', component: ProductList },
+    { path: '/products/:pno', name: 'ProductDetail', component: ProductDetail },
+    { path: '/products/create', name: 'CreateProduct', component: CreateProduct },
+    { path: '/products/edit/:pno', name: 'ProductEdit', component: ProductEdit },
+    { path: '/chatbot', component: ChatBot }*/
+];
+const router = createRouter({
+    history: createWebHistory(),
+    routes
+});
+export default router;
