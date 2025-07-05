@@ -52,7 +52,7 @@ const pageSize = 5;
 
 onMounted(fetchBoards);
 
-const paginationBoards = computed(() => {
+const paginatedBoards = computed(() => {
   const start = (currentPage.value - 1) * pageSize;
   return boards.slice(start, start + pageSize);
 });
