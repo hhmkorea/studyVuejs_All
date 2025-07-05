@@ -1,5 +1,12 @@
-import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
+import { createApp } from 'vue';
+import App from './App.vue';
+import router from './router';
+import {createPinia} from "pinia";
+import {useMainStore} from '@/store';
 
-createApp(App).mount('#app')
+const app = createApp(App);
+app.use(createPinia());
+const mainStore = useMainStore(); // 스토어 초기화
+mainStore.initStore(); // 데이터 초기화 호출
+app.use(router);
+app.mount('#app')
