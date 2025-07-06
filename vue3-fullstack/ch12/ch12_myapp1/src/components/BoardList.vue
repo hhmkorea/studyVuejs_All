@@ -18,7 +18,7 @@
         <tr v-for="board in paginatedBoards" :key="board.no">
           <td>{{ board.no }}</td>
           <td>
-            <router-link :to="`/boards/detail` + board.no">{{ board.title }}</router-link>
+            <router-link :to="`/boards/detail/` + board.no">{{ board.title }}</router-link>
           </td>
           <td>{{ new Date(board.resdate).toLocaleDateString() }}</td>
           <td>{{ board.author }}</td>
@@ -41,7 +41,7 @@
 </template>
 
 <script setup>
-import {useMainStore} from "@/store/index.js";
+import {useMainStore} from "@/store";
 import {computed, onMounted, ref} from "vue";
 
 const mainStore = useMainStore();
