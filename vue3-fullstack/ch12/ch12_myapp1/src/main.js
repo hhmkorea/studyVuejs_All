@@ -11,4 +11,4 @@ app.use(createPinia());
 const mainStore = useMainStore(); // 스토어 초기화
 mainStore.initStore(); // 데이터 초기화 호출
 app.use(router);
-app.mount('#app')
+app.mount('#app');
