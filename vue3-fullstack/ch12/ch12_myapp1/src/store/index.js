@@ -1,15 +1,11 @@
 import {defineStore} from "pinia";
+import axios from "axios";
 
 export const useMainStore = defineStore('main', {
     state: () => ({
-        boards: {},
-        boardDetail: {},
-        questions: [],
-        questionDetail: {},
-        dataRoomList: [],
-        dataRoomDetail: {},
-        products: [],
-        productDetail: {},
+        boards: [], boardDetail: {}, questions: [], questionDetail: {},
+        dataRoomList: [], dataRoomDetail: {}, products: [], productDetail: {},
+        bds: [], qas: [], drs: [], pds: [],
     }),
     actions: {
         async fetchBoards() {      // 공지사항 목록 가져오기
