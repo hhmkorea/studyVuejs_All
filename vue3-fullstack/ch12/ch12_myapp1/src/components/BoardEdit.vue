@@ -34,23 +34,24 @@ const content = ref('');
 const author = ref('');
 
 onMounted(async () => {
-  await fetchBoardDetail(route.params.id);
+  await fetchBoardDetail(route.params.no);
   const board = mainStore.boardDetail;
   title.value = board.title;
   content.value = board.content;
   author.value = board.author;
+  console.log("board : " + board);
 });
 
 const handleUpdate = async () => {
-  await updateBoard(route.params.id, {
+  await updateBoard(route.params.no, {
     title: title.value,
     content: content.value,
     author: author.value,
   });
-  router.push(`/boards/detail/${route.params.id}`);
+  router.push(`/boards/detail/${route.params.no}`);
 };
 
 const cancelEdit = () => {
-  router.push(`/boards/detail/${route.params.id}`);
+  router.push(`/boards/detail/${route.params.no}`);
 };
 </script>
