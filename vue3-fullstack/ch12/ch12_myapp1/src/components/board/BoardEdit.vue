@@ -20,7 +20,7 @@
 </template>
 
 <script setup>
-import {useMainStore} from "@/store";
+import {useMainStore} from "@/store/index.js";
 import {useRoute, useRouter} from "vue-router";
 import {onMounted, ref} from "vue";
 

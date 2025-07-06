@@ -11,7 +11,7 @@
 </template>
 
 <script setup>
-import {useMainStore} from "@/store";
+import {useMainStore} from "@/store/index.js";
 import {ref} from "vue";
 import {useRouter} from "vue-router";
 

@@ -23,7 +23,7 @@
 </template>
 
 <script setup>
-import {useMainStore} from "@/store";
+import {useMainStore} from "@/store/index.js";
 import {useRoute, useRouter} from "vue-router";
 import {onMounted} from "vue";
 import axios from "axios";

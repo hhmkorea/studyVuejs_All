@@ -73,7 +73,7 @@ alter table dataroom convert to charset utf8;
 alter table product convert to charset utf8;
 
 select * from board;
-select * from qna;          -- parno
+select * from qna;          -- parno ???
 select * from dataroom;
 select * from product;
 

@@ -41,7 +41,7 @@
 </template>
 
 <script setup>
-import {useMainStore} from "@/store";
+import {useMainStore} from "@/store/index.js";
 import {computed, onMounted, ref} from "vue";
 
 const mainStore = useMainStore();
