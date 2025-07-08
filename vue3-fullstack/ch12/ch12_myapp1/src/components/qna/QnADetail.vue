@@ -21,7 +21,7 @@
 </template>
 
 <script setup>
-import {useMainStore} from "@/store/index.js";
+import {useMainStore} from "@/store";
 import {useRoute, useRouter} from "vue-router";
 import {onMounted} from "vue";
 

@@ -56,6 +56,10 @@ const paginatedBoards = computed(() => {
   const start = (currentPage.value - 1) * pageSize;
   return boards.slice(start, start + pageSize);
 });
+
 const totalPages = computed(() => Math.ceil(boards.length / pageSize));
-const changePage = (page) => { currentPage.value = page; };
+
+const changePage = (page) => {
+  currentPage.value = page;
+};
 </script>

@@ -34,7 +34,7 @@
         <a @click="changePage(page)">{{ page }}</a>
       </li>
       <li v-if="currentPage < totalPages" class="pagination-next">
-        <a @click="changePage(currentPage + 1)">Next</a>/
+        <a @click="changePage(currentPage + 1)">Next</a>
       </li>
     </ul>
   </div>
@@ -46,7 +46,7 @@ import {useRouter} from "vue-router";
 import {computed, onMounted, ref} from "vue";
 
 const mainStore = useMainStore();
-const { fetchQuestions, questions } = useMainStore();
+const { fetchQuestions, questions } = mainStore;
 const router = useRouter();
 const currentPage = ref(1);
 const pageSize = 5;
@@ -58,9 +58,7 @@ const paginatedQuestions = computed(() => {
   return questions.slice(start, start + pageSize);
 });
 
-const totalPages = computed(() => {
-  Math.ceil(questions.length / pageSize);
-});
+const totalPages = computed(() => Math.ceil(questions.length / pageSize));
 
 const changePage = (page) => {
   currentPage.value = page;
