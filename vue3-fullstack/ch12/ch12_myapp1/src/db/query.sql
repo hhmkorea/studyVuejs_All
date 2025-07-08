@@ -6,11 +6,11 @@ CREATE TABLE board (
     resdate DATETIME DEFAULT CURRENT_TIMESTAMP,
     hits    INT      DEFAULT 0
 );
-
+DROP TABLE qna;
 CREATE TABLE qna (
     qno     INT AUTO_INCREMENT PRIMARY KEY,
     lev     INT DEFAULT 0,
-    parno   INT,
+    parno   INT DEFAULT 1,
     title   VARCHAR(255),
     content TEXT,
     author  VARCHAR(255),
@@ -45,6 +45,8 @@ INSERT INTO board (title, content, author) VALUES
 ('세 번째 공지사항', '세 번째 공지사항 내용입니다.',  '관리자'),
 ('네 번째 공지사항', '네 번째 공지사항 내용입니다.',  '관리자'),
 ('다섯 번째 공지사항', '다섯 번째 공지사항 내용입니다.',  '관리자');
+
+truncate table qna;
 
 INSERT INTO qna (title, content, author, lev) VALUES
 ('첫 번째 질문', '첫 번째 질문 내용입니다.',  '사용자1', 0),

@@ -91,9 +91,10 @@ export const useMainStore = defineStore('main', {
                 console.error("글 수정 실패", error);
             }
         },
-        async insertAnswer(answerData) {
+        async insertAnswer(parno, answerData) {
+            console.log("answerData : ", answerData);
             try {
-                await axios.post('http://localhost:3000/qna/answer/insert/:parno', answerData);
+                await axios.post(`http://localhost:3000/qna/answer/insert/${parno}`, answerData);
                 await this.fetchQuestions();
             }  catch (error) {
                 console.error("답변 등록 실패", error);
