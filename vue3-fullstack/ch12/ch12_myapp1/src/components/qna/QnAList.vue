@@ -65,6 +65,8 @@ const changePage = (page) => {
 };
 
 const goToInsert = () => {
-  router.push({ name: 'QnAInsert' });
+  router.push({
+    name: 'QnAInsert'
+  });
 };
 </script>

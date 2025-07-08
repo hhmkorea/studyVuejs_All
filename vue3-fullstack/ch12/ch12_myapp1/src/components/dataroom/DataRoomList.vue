@@ -13,10 +13,10 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="item in paginatedDataRoomList" :key="item.dno" @click="viewDetail(item.dno)">
+        <tr v-for="item in paginatedDataRoomList" :key="item.dno"> <!--  @click="viewDetail(item.dno)" 뺌-->
           <td>{{ item.dno }}</td>
           <td>
-            <router-link :to="{ name: 'DataRoomList', params: { dno: item.dno }}">{{ item.title }}</router-link>
+            <router-link :to="{ name: 'DataRoomDetail', params: { dno: item.dno }}">{{ item.title }}</router-link> <!-- router-link 추가-->
           </td>
           <td>{{ item.author }}</td>
           <td>{{ new Date(item.resdate).toLocaleDateString() }}</td
@@ -37,6 +37,7 @@
     </ul>
   </div>
 </template>
+
 <script setup>
 import { ref, computed, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
@@ -57,8 +58,20 @@ const paginatedDataRoomList = computed(() => {
 
 const totalPages = computed(() => Math.ceil(dataRoomList.length / pageSize));
 
-const changePage = (page) => { currentPage.value = page; };
+const changePage = (page) => {
+  currentPage.value = page;
+};
 
-const viewDetail = (dno) => router.push({ name: 'DataRoomDetail', params: { dno: dno } });
-const createDataRoom = () => router.push({ name: 'CreateDataRoom' });
+const viewDetail = (dno) => {
+  router.push({
+    name: 'DataRoomDetail',
+    params: {dno: dno},
+  });
+};
+
+const createDataRoom = () => {
+  router.push({
+    name: 'CreateDataRoom'
+  });
+};
 </script>    
