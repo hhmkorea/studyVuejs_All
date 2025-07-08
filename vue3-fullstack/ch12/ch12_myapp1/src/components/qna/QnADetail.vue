@@ -26,7 +26,7 @@ import {useRoute, useRouter} from "vue-router";
 import {onMounted} from "vue";
 
 const mainStore = useMainStore();
-const { fetchQuestionDetail, questionDetail, deleteQuestion } = useMainStore();
+const { fetchQuestionDetail, questionDetail, deleteQuestion } = mainStore;
 
 const route = useRoute();
 const router = useRouter();
@@ -56,7 +56,9 @@ const goToList = () => {
 const handleDelete = async () => {
   if (confirm("정말 삭제하시겠습니까?")) {
     await deleteQuestion(route.params.qno);
-    router.push({ name: 'QnAList' });
-  }
+    router.push({
+      name: 'QnAList'
+    });
+  };
 };
 </script>
