@@ -75,8 +75,9 @@ alter table dataroom convert to charset utf8;
 alter table product convert to charset utf8;
 
 select * from board;
-select * from qna;          -- parno ???
+select * from qna;          -- parno : 댓글 남길때 게시물 번호
 select * from dataroom;
+truncate table dataroom;
 select * from product;
 
 commit;

@@ -6,9 +6,9 @@
       </div>
       <div class="card-section">
         <form @submit.prevent="editQuestion">
-          <label>제목</label><input v-model="title" required />
+          <label>제목</label><input type="text" v-model="title" required />
           <label>내용</label><textarea v-model="content" required></textarea>
-          <label>작성자</label><input v-model="author" required />
+          <label>작성자</label><input type="text" v-model="author" required />
           <button type="submit" class="button primary">수정 완료</button>
         </form>
       </div>

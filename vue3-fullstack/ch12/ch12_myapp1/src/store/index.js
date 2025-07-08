@@ -116,19 +116,31 @@ export const useMainStore = defineStore('main', {
                 console.error("자료실 상세 조회 실패:", error);
             }
         },
-        async createDataRoom(data) {
+        async createDataRoom(formData) {
             try {
-                await axios.post('http://localhost:3000/dataroom/insert', data, {
-                    headers: { 'Content-Type': 'multipart/form-data' },
+                console.log("title : " + formData.get("title"));
+                console.log("content : " + formData.get("content"));
+                console.log("author : " + formData.get("author"));
+                console.log("datafile : " + formData.get("datafile"));
+                await axios.post('http://localhost:3000/dataroom/insert', formData, {
+                    headers: {
+                        'Content-Type': 'multipart/form-data'
+                    },
                 });
             } catch (error) {
                 console.error("자료 등록 실패:", error);
             }
         },
-        async updateDataRoom(dno, data) {
+        async updateDataRoom(dno, formData) {
             try {
-                await axios.put(`http://localhost:3000/dataroom/update/${dno}`, data, {
-                    headers: { 'Content-Type': 'multipart/form-data' },
+                console.log("title : " + formData.get("title"));
+                console.log("content : " + formData.get("content"));
+                console.log("author : " + formData.get("author"));
+                console.log("datafile : " + formData.get("datafile"));
+                await axios.put(`http://localhost:3000/dataroom/update/${dno}`, formData, {
+                    headers: {
+                        'Content-Type': 'multipart/form-data'
+                    },
                 });
             } catch (error) {
                 console.error("자료 수정 실패:", error);
