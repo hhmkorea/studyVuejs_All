@@ -2,7 +2,7 @@
   <div class="grid-container">
     <h1>자료 수정</h1>
     <hr/>
-    <form @submit.prevent="submitEdit">
+    <form @submit.prevent="submitEdit" enctype="multipart/form-data" method="post">
       <label>제목:</label><input type="text" v-model="dataRoom.title" required/>
       <label>내용:</label><textarea v-model="dataRoom.content" required></textarea>
       <label>작성자:</label><input type="text" v-model="dataRoom.author" required/>

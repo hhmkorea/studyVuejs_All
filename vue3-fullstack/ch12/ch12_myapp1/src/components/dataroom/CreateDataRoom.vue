@@ -1,7 +1,7 @@
 <template>
   <div class="grid-container">
     <h1>자료 등록</h1><hr />
-    <form @submit.prevent="submitDataRoom">
+    <form @submit.prevent="submitDataRoom" enctype="multipart/form-data" method="post">
       <label>제목</label><input type="text" v-model="title" required />
       <label>내용</label><textarea v-model="content" required></textarea>
       <label>작성자</label><input type="text" v-model="author" required />
