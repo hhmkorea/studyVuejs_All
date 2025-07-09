@@ -11,17 +11,17 @@
 </template>
 
 <script setup>
-import {useMainStore} from "@/store/index.js";
+import {useMainStore} from "@/store";
 import {ref} from "vue";
 import {useRouter} from "vue-router";
 
 const mainStore = useMainStore();
-const { insertBoard } = useMainStore();
+const { insertBoard } = mainStore;
+const router = useRouter();
 
 const title = ref('');
 const content = ref('');
 const author = ref('');
-const router = useRouter();
 
 const handleSubmit = async () => {
   await insertBoard({

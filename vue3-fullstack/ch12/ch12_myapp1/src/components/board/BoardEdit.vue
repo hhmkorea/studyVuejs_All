@@ -20,12 +20,12 @@
 </template>
 
 <script setup>
-import {useMainStore} from "@/store/index.js";
+import {useMainStore} from "@/store";
 import {useRoute, useRouter} from "vue-router";
 import {onMounted, ref} from "vue";
 
 const mainStore = useMainStore();
-const { fetchBoardDetail, updateBoard } = useMainStore();
+const { fetchBoardDetail, updateBoard } = mainStore;
 const route = useRoute();
 const router = useRouter();
 

@@ -23,13 +23,13 @@
 </template>
 
 <script setup>
-import {useMainStore} from "@/store/index.js";
+import {useMainStore} from "@/store";
 import {useRoute, useRouter} from "vue-router";
 import {onMounted} from "vue";
 import axios from "axios";
 
 const mainStore = useMainStore();
-const { fetchBoardDetail, boardDetail, deleteBoard } = useMainStore();
+const { fetchBoardDetail, boardDetail, deleteBoard } = mainStore;
 const route = useRoute();
 const router = useRouter();
 

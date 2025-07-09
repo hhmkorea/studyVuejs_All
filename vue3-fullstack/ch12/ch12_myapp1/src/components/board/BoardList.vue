@@ -45,8 +45,8 @@ import {useMainStore} from "@/store/index.js";
 import {computed, onMounted, ref} from "vue";
 
 const mainStore = useMainStore();
-
 const { fetchBoards, boards } = mainStore;
+
 const currentPage = ref(1);
 const pageSize = 5;
 
