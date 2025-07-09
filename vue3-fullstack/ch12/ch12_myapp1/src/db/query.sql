@@ -80,4 +80,4 @@ select * from dataroom;
 truncate table dataroom;
 select * from product;
 
-commit;
+update dataroom set title = 'test' where title is null;

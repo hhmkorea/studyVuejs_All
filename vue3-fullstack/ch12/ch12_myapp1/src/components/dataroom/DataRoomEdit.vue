@@ -2,7 +2,7 @@
   <div class="grid-container">
     <h1>자료 수정</h1>
     <hr/>
-    <form @submit.prevent="submitEdit" class="form" enctype="multipart/form-data">
+    <form @submit.prevent="submitEdit">
       <label>제목:</label><input type="text" v-model="dataRoom.title" required/>
       <label>내용:</label><textarea v-model="dataRoom.content" required></textarea>
       <label>작성자:</label><input type="text" v-model="dataRoom.author" required/>
@@ -11,6 +11,7 @@
     </form>
   </div>
 </template>
+
 <script setup>
 import {ref, onMounted} from 'vue';
 import {useRoute, useRouter} from 'vue-router';

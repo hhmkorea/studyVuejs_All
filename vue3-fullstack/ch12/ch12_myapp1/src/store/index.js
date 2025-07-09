@@ -118,6 +118,7 @@ export const useMainStore = defineStore('main', {
         },
         async createDataRoom(formData) {
             try {
+                console.log("createDataRoom --------------- ")
                 console.log("title : " + formData.get("title"));
                 console.log("content : " + formData.get("content"));
                 console.log("author : " + formData.get("author"));
@@ -133,6 +134,7 @@ export const useMainStore = defineStore('main', {
         },
         async updateDataRoom(dno, formData) {
             try {
+                console.log("updateDataRoom --------------- ")
                 console.log("title : " + formData.get("title"));
                 console.log("content : " + formData.get("content"));
                 console.log("author : " + formData.get("author"));
